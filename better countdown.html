@@ -1,0 +1,17 @@
+//btrCountdownTimer() created to fulfill assignment Assignment: Efficienty at Mission Control 
+function btrCountdownTimer(){
+    console.log("btrCountdownTimer() started");
+    var currTime = 50; 
+
+    for(var i = 0; i < 11; i++){
+        seTimeout(function(){
+            //what we do each iteration
+            console.log(currTime); 
+            document.getElementById("countDis").innerHTML = currTime;
+            if(currTime == 0){
+                 document.getElementById("countDis").innerHTML = "Blastoff!!!";
+            }
+            currTime = currTime -5;
+        }, i * 5000
+    }
+}
